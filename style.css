@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffe6f0,#fff5f8,#ffeef7);
+    color:#5a3d4b;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    color:#ff4f8b;
+    margin-bottom:20px;
+}
+
+.quote{
+    font-size:20px;
+    color:#7b5a6a;
+    margin-bottom:40px;
+    max-width:600px;
+}
+
+button{
+    background:#ff4f8b;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(255,79,139,.3);
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff2e73;
+}
+
+.hidden{
+    display:none;
+}
+
+#letter h2,
+.special h2,
+.final h2{
+    color:#ff4f8b;
+    margin-bottom:30px;
+    font-size:40px;
+    font-family:'Great Vibes',cursive;
+}
+
+#typewriter{
+    background:white;
+    width:90%;
+    max-width:800px;
+    padding:35px;
+    border-radius:25px;
+    line-height:2;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    text-align:left;
+}
+
+#typewriter p{
+    margin-bottom:18px;
+}
+
+.love{
+    text-align:center;
+    font-size:22px;
+    color:#ff4f8b;
+    font-weight:bold;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+    width:90%;
+    max-width:1000px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(255,182,193,.35);
+    transition:.4s;
+    font-size:18px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.final p{
+    max-width:700px;
+    line-height:2;
+    margin-bottom:35px;
+}
+
+#message{
+    margin-top:35px;
+    display:none;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(255,182,193,.4);
+    font-size:20px;
+    color:#ff4f8b;
+    animation:fadeIn 1.5s;
+}
+
+.hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.heart{
+    position:absolute;
+    color:#ff7ca8;
+    animation:float 8s linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) rotate(0deg);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120px) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.quote{
+    font-size:17px;
+}
+
+#letter h2,
+.special h2,
+.final h2{
+    font-size:32px;
+}
+
+button{
+    width:85%;
+}
+
+#typewriter{
+    padding:25px;
+}
+}
